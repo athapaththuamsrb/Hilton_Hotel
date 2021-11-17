@@ -6,7 +6,9 @@ import {AuthenticationContextComponent} from "./core/authentication/authenticati
 const routes: Routes = [{path: '', redirectTo: '/auth', pathMatch: 'full'},
                         {path: 'auth', component: AuthenticationContextComponent, children: [
                                       {path: 'login', component: LoginComponent}      ]},
-                        { path: 'dashboard', loadChildren: () => import('./core/model/dash-board/dash-board.module').then(m => m.DashBoardModule) }
+                        { path: 'dashboard', loadChildren: () => import('./core/model/dash-board/dash-board.module').then(m => m.DashBoardModule) },
+                        { path: 'notFound', loadChildren: () => import('./core/model/not-found/not-found.module').then(m => m.NotFoundModule) },
+                        {path: '**', redirectTo: '/notFound'}
 ];
 
 @NgModule({

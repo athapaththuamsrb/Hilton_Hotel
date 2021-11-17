@@ -1,0 +1,23 @@
+.center {
+  top: 20%;
+  position: absolute;
+  left: 30%;
+  animation-delay: 1s;
+  animation: zoom 5s;
+  animation-fill-mode: forwards;
+}
+h1 {
+  font-size: 400%;
+}
+@keyframes zoom {
+  from {
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari 3-8 */
+    transform: scale(1);
+  }
+  to {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+  }
+}
