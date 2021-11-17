@@ -1,0 +1,28 @@
+.example-card {
+  max-width: 400px;
+  border: black solid 2px;
+  border-radius: 3%;
+}
+
+.example-header-image {
+  background-image: url('https://image.shutterstock.com/image-photo/london-uk-august-7th-2015-260nw-305148593.jpg');
+  background-size: cover;
+}
+.main-wrapper{
+  background-color: #cdb339;
+  height: 92.4vh;
+}
+.zoom {
+  transition: transform 0.2s;
+}
+.zoom:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+img{
+  padding: 10px;
+  height: 250px
+
+}
+

@@ -1,0 +1,21 @@
+.main-wrap{
+  background-color: bisque;
+  border: 2px solid black;
+  padding: 10px;
+  top:30%;
+  left: 10%;
+  position: absolute;
+}
+.outer-wrap{
+  background-image: url("https://media-exp1.licdn.com/dms/image/C561BAQEsc_RnAHoJwQ/company-background_10000/0/1554337771913?e=2159024400&v=beta&t=N55iFqpiATZAupZ36W5RU9iAWZGYPb1RlHepTR7AZhQ");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  overflow: hidden;
+}

@@ -1,0 +1,65 @@
+.main-wrap{
+  background-image: url("https://www.marketing91.com/wp-content/uploads/2018/09/Marketing-Strategy-of-Hilton-Hotels-5.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  overflow: hidden;
+}
+.item2 > div {
+  font-size: 300%;
+  font-family: "Oswald", sans-serif;
+  color: brown;
+  font-weight: bold;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+#div1 {
+  animation: mymove1 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+#div2 {
+  animation: mymove2 5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+#div3 {
+  animation: mymove3 5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes mymove1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 35%;
+  }
+}
+@keyframes mymove2 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 45%;
+  }
+}
+@keyframes mymove3 {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 38%;
+  }
+}
+.navbar-brand{
+  font-family: 'Roboto Slab', serif;
+  font-size: 200%;
+}

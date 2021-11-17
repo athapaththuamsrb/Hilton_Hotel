@@ -1,0 +1,72 @@
+<div class="container">
+
+  <div class="main-wrap">
+    <div class="inner-wrap">
+      <div>
+        <h2>Room:{{roomNumber}}</h2>
+        <h2>Customer name:{{name}}</h2>
+        <h2>Contact number:{{contact}}</h2>
+        <h2>Email:{{email}}</h2>
+        <h2>NIC:{{nic}}</h2>
+        <h2>Address:{{address}}</h2>
+        <h2>Payment the moment:{{payment}}</h2>
+      </div>
+      <h1>ROOM {{roomNumber}} PAYMENT BILE</h1>
+      <hr>
+      <form [formGroup]="addingDataForm">
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Room number</mat-label>
+          <input formControlName="roomNumber" type="text" matInput [ngModel]="roomNumber" readonly>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Select service</mat-label>
+          <select matNativeControl required formControlName="service">
+            <option label="--select something --"></option>
+            <option value="service-1">service-1</option>
+            <option value="service-2">service-2</option>
+            <option value="service-3">service-3</option>
+
+          </select>
+          <mat-hint>pick up service</mat-hint>
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <mat-form-field appearance="fill">
+          <mat-label>Select quantity</mat-label>
+          <select matNativeControl required formControlName="quantity">
+            <option label="--select something --"></option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+
+          </select>
+          <mat-hint>pick up quantity</mat-hint>
+        </mat-form-field>
+        <br><br><br>
+        <button class="btn btn-primary btn-sm" type="button" (click)="addList()">
+          Add
+        </button>
+      </form>
+      <table class="table table-border">
+        <thead>
+        <tr>
+          <th>Service</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of listData">
+            <td><span>{{item.service}}</span></td>
+            <td><span>{{item.quantity}}</span></td>
+            <td><span>{{price(item.quantity,item.service)}}</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary btn-sm" type="button" (click)="paymentSettlement()">
+        Payment Settlement
+      </button>
+    </div>
+  </div>
+</div>

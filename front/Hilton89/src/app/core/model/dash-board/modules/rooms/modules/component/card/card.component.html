@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-title>{{roomNumber}}</mat-card-title>
+  <mat-card-subtitle>{{floor}}</mat-card-subtitle>
+  <mat-card-actions>
+    <button type="button" class="btn btn-primary" routerLink="/dashboard/rooms/booking/{{roomNumber}}" [disabled]="!isAvailable">booking</button>
+    &nbsp;
+    <button type="button" class="btn btn-info" routerLink="/dashboard/rooms/addingData/{{roomNumber}}"[disabled]="isAvailable">data adding</button>
+  </mat-card-actions>
+</mat-card>

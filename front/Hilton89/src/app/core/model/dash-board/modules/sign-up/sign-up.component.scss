@@ -1,0 +1,46 @@
+.main-wrap{
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  margin-right: 20%;
+  border: 2px solid black;
+  padding: 20px;
+  background-color: #16a085;
+}
+.inner-wrap{
+  width: 90%;
+  height: auto;
+  background-color: white;
+  padding: 10px;
+  border: 10px solid black;
+}
+.example-full-width{
+  width: 100%;
+}
+.btn{
+  width: 100%;
+  align-items: center;
+}
+h1{
+  font-size: 200%;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  justify-content: center;
+  text-align: center;
+}
+hr{
+  border: 2px solid black;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+h3{
+  background-color: red;
+  color: black;
+  border-radius: 20%;
+}

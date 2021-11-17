@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="main-wrap">
+    <div class="inner-wrap">
+      <h1>Add officer</h1>
+      <hr>
+      <form [formGroup]="addUpOfficerForm" (ngSubmit)="addUp()">
+        <div>
+          <h3 *ngIf="!isValid">check the NIC number it's already entered</h3>
+        </div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input formControlName="name" type="text" matInput placeholder="Ex. Samantha">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>NIC</mat-label>
+          <input formControlName="nic" type="text" matInput placeholder="EX. 123456789012"  ngModel maxlength="12">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Address</mat-label>
+          <input formControlName="address" type="text" matInput placeholder="Ex. Colombo">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Contact</mat-label>
+          <input formControlName="contact" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" matInput  placeholder="Ex. 012-345-6789"  ngModel maxlength="10">
+        </mat-form-field>
+        <label id="example-radio-group-label">Position :</label>
+        <br>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="chosenItem" formControlName="position">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mat-radio-button value="Reception">Reception</mat-radio-button>
+          <br><br>
+          <mat-radio-button value="Information-assistant">Information assistant</mat-radio-button>
+          <br><br>
+          <mat-radio-button value="Front-office-cashier">Front office cashier</mat-radio-button>
+          <br><br>
+          <mat-radio-button value="Bell-captain">Bell captain</mat-radio-button>
+          <br><br>
+          <mat-radio-button value="Bell-boy">Bell boy</mat-radio-button>
+          <br><br>
+          <mat-radio-button value="Guest relation executive">Guest relation executive</mat-radio-button>
+        </mat-radio-group>
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input formControlName="email" type="email" matInput placeholder="Ex. pat@example.com">
+        </mat-form-field>
+
+        <button class="btn btn-primary btn-sm" type="submit">
+          Add up
+        </button>
+      </form>
+
+    </div>
+  </div>
+</div>

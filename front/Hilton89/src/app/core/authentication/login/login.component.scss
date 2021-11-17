@@ -1,0 +1,24 @@
+.inner-wrap{
+  align-items: center;
+  display: flex;
+  width: 60%;
+  height: auto;
+  background-color:rgba(247, 242, 242, 0.6);
+  padding: 40px;
+  margin-left: 20%;
+  justify-content: center;
+  border-radius:5% ;
+  border: 2px solid black;
+}
+.example-full-width{
+  width: 100%;
+}
+.btn{
+  width: 100%;
+}
+h3{
+  background-color: red;
+  color: black;
+  border-radius: 20%;
+  text-align: center;
+}

@@ -1,0 +1,5 @@
+<div class="container" *ngFor="let doubleRoom of doubleRooms">
+  <br>
+  <app-card [roomNumber]="doubleRoom.roomNumber" [floor]= "doubleRoom.floor" [isAvailable] = "doubleRoom.isAvailable"></app-card>
+  <br>
+</div>

@@ -1,0 +1,61 @@
+
+
+<div class="main-wrap">
+  <div class="name-wrap">
+    <h2>&nbsp;&nbsp;HILTON</h2>
+  </div>
+
+  <div class="ham-wrap" (click)="sliderState=!sliderState">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="logged-user-wrap">
+    <div class="user-wrap">
+      <h4>{{userName}}</h4>
+    </div>
+    <div class="avatar-wrap">
+      <img src="https://cylonlisting.com/wp-content/uploads/2017/03/default-user.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="slide" *ngIf="sliderState" [@slider]>
+
+    <div class="slide-top">
+
+      <h2 class="user-name">
+        {{userName}}
+      </h2>
+      <h4 class="user-email">
+        {{email}}
+      </h4>
+
+      <div class="slider-avatar-wrap">
+        <img src="https://cylonlisting.com/wp-content/uploads/2017/03/default-user.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="slide-bottom">
+
+      <ul>
+        <li routerLink="/dashboard/logOut" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Log out</span>
+        </li>
+        <li routerLink="/dashboard/rooms" routerLinkActive="active"  (click)="sliderState=!sliderState">
+          <span>Rooms</span>
+        </li>
+        <li routerLink="/dashboard/attendance-management" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Attendance management</span>
+        </li>
+        <li routerLink="/dashboard/signUp" *ngIf="isAdmin" routerLinkActive="active" (click)="sliderState=!sliderState">
+          <span>Sign up</span>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+</div>
